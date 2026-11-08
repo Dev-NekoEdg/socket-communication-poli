@@ -1,6 +1,6 @@
 # Chat bi-direccional 
 
-Proyecto de chat bi-direccional 
+Proyecto de chat bi-direccional con sockets.
 
 
 
