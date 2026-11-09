@@ -47,6 +47,7 @@ public class ClientHandler implements Runnable {
                     break;
                 }
                 if (parts[0].equals(Protocol.MSG) && parts.length == 3) {
+                    System.out.println("Recibido del client: "+ line);
                     sendPrivateMessage(parts[1], parts[2]);
                 } else {
                     send(Protocol.join(Protocol.ERROR, "Mensaje no válido"));
@@ -110,7 +111,7 @@ public class ClientHandler implements Runnable {
 
     /** Método Synchronized para que no se sobreescriba el mensaje de los usuarios */
     private synchronized void send(String line) {
-        System.out.println(line);
+        System.out.println("Enviando al cliente: " + line);
         out.println(line);
     }
 }
